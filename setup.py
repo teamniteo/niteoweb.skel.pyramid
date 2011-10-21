@@ -20,42 +20,29 @@ setup(name='niteoweb.zulu',
                        read('docs', 'HISTORY.rst') +
                        read('docs', 'LICENSE.rst'),
       classifiers=[
-        "Framework :: Plone",
         "Programming Language :: Python",
+        "Framework :: Pylons",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
         ],
-      keywords='Plone Python',
+      keywords='web wsgi bfg pylons pyramid',
       author='NiteoWeb Ltd.',
       author_email='info@niteoweb.com',
       url='http://www.niteoweb.com',
       license='BSD',
       packages=find_packages('src', exclude=['ez_setup']),
-      namespace_packages=['niteoweb'],
       package_dir={'': 'src'},
       include_package_data=True,
       zip_safe=False,
+      test_suite='zulu',
       install_requires=[
           # list project dependencies
-          'niteoweb.loginas',
           'niteoweb.fabfile',
-          'plone.app.caching',
-          'plone.app.testing',
-          'plone.app.theming',
           'setuptools',
-          'z3c.jbot',
       ],
-      extras_require={
-          # list libs needed for unittesting this project
-          'test': [
-              'mock',
-              'plone.app.testing',
-              'transmogrify.filesystem',
-              'unittest2',
-          ]
-      },
-      entry_points="""
-      # -*- Entry points: -*-
-
-      [z3c.autoinclude.plugin]
-      target = plone
+      entry_points="""\
+      [paste.app_factory]
+      main = zulu:main
       """,
+#      paster_plugins=['pyramid'],
       )

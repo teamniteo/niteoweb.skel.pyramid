@@ -7,8 +7,8 @@ Create a skeleton for your new project
 
 .. code-block:: bash
 
-    $ svn export http://svn.github.com/nzupan/niteoweb.skel.plone.git niteoweb.<shortname>
-    $ cd niteoweb.<shortname>
+    $ svn export http://svn.github.com/nzupan/niteoweb.skel.pyramid.git <shortname>
+    $ cd <shortname>
     $ mv src/niteoweb/zulu src/niteoweb/<shortname>
     $ mkdir docs/sphinx/_static
 

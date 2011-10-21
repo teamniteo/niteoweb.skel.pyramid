@@ -1,4 +1,3 @@
 # use it like this: svn propset svn:ignore -F etc/svnignore ./etc
 nginx.conf
-haproxy.conf
-varnish.vcl
+development.ini
