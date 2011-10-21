@@ -9,7 +9,7 @@ Create a skeleton for your new project
 
     $ svn export http://svn.github.com/nzupan/niteoweb.skel.pyramid.git <shortname>
     $ cd <shortname>
-    $ mv src/niteoweb/zulu src/niteoweb/<shortname>
+    $ mv src/zulu src/<shortname>
     $ mkdir docs/sphinx/_static
 
 
@@ -18,9 +18,9 @@ Commit skeleton to repository
 
 .. code-block:: bash
 
-    $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/niteoweb.<shortname> -m "create package dir"
-    $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/niteoweb.<shortname>/{trunk,tags,branches} -m "create svn structure"
-    $ svn co https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/niteoweb.<shortname>/trunk ./
+    $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname> -m "create package dir"
+    $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname>/{trunk,tags,branches} -m "create svn structure"
+    $ svn co https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname>/trunk ./
     $ ln -s development.cfg buildout.cfg
     $ svn add *
 
