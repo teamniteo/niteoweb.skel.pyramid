@@ -46,8 +46,6 @@ Initialize buildout and start paster
 
 
 
-#################### REMOVE ALL BUT THIS LINE ####################
+#################### REMOVE ALL BUT THE FOLLOWING LINE ####################
 
 See `docs/README.rst <https://sphinx.niteoweb.com/niteoweb.zulu>`_
-
-##################################################################
