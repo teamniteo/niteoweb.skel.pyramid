@@ -39,6 +39,14 @@ setup(name='zulu',
           # list project dependencies
           'niteoweb.fabfile',
           'setuptools',
+          'SQLAlchemy',
+          'WebError',
+          'docutils',
+          'pyramid',
+          'repoze.tm2>=1.0b1',  # default_commit_veto
+          'transaction',
+          'unittest2',
+          'zope.sqlalchemy',
       ],
       entry_points="""\
       [paste.app_factory]
