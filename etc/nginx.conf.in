@@ -7,7 +7,7 @@ upstream zulu_pasters {
 
 server {
     listen 80;
-    server_name zulu.niteoweb.com;
+    server_name zulu.com www.zulu.com;
     access_log /var/log/nginx/zulu.access.log;
 
     # Redirect from www to non-www
