@@ -1,0 +1,72 @@
+#---------- App Configuration ----------
+[app:zulu]
+use = egg:zulu
+reload_templates = false
+debug_authorization = false
+debug_notfound = false
+debug_routematch = false
+debug_templates = false
+default_locale_name = en
+sqlalchemy.url = ${buildout:sqlalchemy_url}
+
+#---------- Pipeline Configuration ----------
+[filter:weberror]
+use = egg:WebError#error_catcher
+debug = false
+error_email = maintenance@niteoweb.com
+from_address = ${paster}@zuludb.net
+smtp_server = localhost
+
+[filter:tm]
+use = egg:repoze.tm2#tm
+commit_veto = repoze.tm:default_commit_veto
+
+[pipeline:main]
+pipeline =
+    weberror
+    tm
+    zulu
+
+#---------- Server Configuration ----------
+[server:main]
+use = egg:Paste#http
+host = 0.0.0.0
+port = ${port}
+
+#---------- Logging Configuration ----------
+[loggers]
+keys = root, zulu, sqlalchemy
+
+[handlers]
+keys = console
+
+[formatters]
+keys = generic
+
+[logger_root]
+level = WARN
+handlers = console
+
+[logger_zulu]
+level = WARN
+handlers =
+qualname = zulu
+
+[logger_sqlalchemy]
+level = WARN
+handlers =
+qualname = sqlalchemy.engine
+# "level = INFO" logs SQL queries.
+# "level = DEBUG" logs SQL queries and results.
+# "level = WARN" logs neither.  (Recommended for production systems.)
+
+[handler_console]
+class = StreamHandler
+args = (sys.stderr,)
+level = NOTSET
+formatter = generic
+
+[formatter_generic]
+format = %(asctime)s %(levelname)-5.5s [%(name)s][%(threadName)s] %(message)s
+
+# End logging configuration

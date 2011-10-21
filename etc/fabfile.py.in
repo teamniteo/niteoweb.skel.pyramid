@@ -1,0 +1,70 @@
+"""
+This is your mindset: **deployment is boring**. You make it boring by making it
+easily repeatable and taking out the human part. You never want to connect to
+the server to do maintenance. You want to have a script that does the tedious
+work for for you.
+
+This is where Fabric comes in. Fabric command file (``fabfile.py``) contains
+several scripts for tasks you need to frequently do on your server. From
+installing base libraries, to running buildout to downloading production data
+to your local machine.
+
+Most commands (but not all!) are ordered in an hierarchy of top-level
+meta-commands to low-level, specific tasks. Here is a tree-view of how commands
+relate to each other. If something goes awry when running a top-level command,
+it's best to resume deployment with a low-level sub-command.
+
+You can get a list of all available commands by running ``bin/fab --list``.
+
+::
+
+    deploy
+    |-- configure_nginx
+    |-- download_code
+    |-- prepare_buildout
+    |-- run_buildout
+    |-- upload_data
+    `-- start_supervisor
+
+Deploy
+------
+
+.. sourcecode:: bash
+
+    $ python2.6 bootstrap.py -c development.cfg
+    $ bin/buildout
+    $ bin/fab deploy
+
+Available Fabric commands
+-------------------------
+"""
+
+from fabric.api import env
+from niteoweb.fabfile import configure_nginx
+from niteoweb.fabfile import download_code
+from niteoweb.fabfile import prepare_buildout
+from niteoweb.fabfile import run_buildout
+from niteoweb.fabfile import start_supervisord
+from niteoweb.fabfile import upload_data
+
+import os
+
+
+env.path = os.getcwd()
+env.hosts = ['${ips:server}']
+env.prod_user = '${config:shortname}'  # production user for this project
+env.server = '${ips:server}'
+env.hq = '${ips:hq}'
+env.shortname = '${config:shortname}'
+
+
+def deploy():
+    """A high-level meta-command for deploying this project to Omega
+    server."""
+
+    configure_nginx()
+    download_code()
+    prepare_buildout()
+    run_buildout()
+    upload_data()
+    start_supervisord()
