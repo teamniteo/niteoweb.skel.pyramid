@@ -16,7 +16,7 @@ Create a skeleton for your new project
 Commit skeleton to repository
 =============================
 
-code-block::
+::
 
     $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname> -m "create package dir"
     $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname>/{trunk,tags,branches} -m "create svn structure"
