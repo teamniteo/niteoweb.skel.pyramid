@@ -11,9 +11,9 @@ import os
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = read('src', 'niteoweb', 'zulu', 'version.txt').strip()
+version = read('src', 'zulu', 'version.txt').strip()
 
-setup(name='niteoweb.zulu',
+setup(name='zulu',
       version=version,
       description="A portal for young entrepreneurs in Slovenia.",
       long_description=read('docs', 'README.rst') +
