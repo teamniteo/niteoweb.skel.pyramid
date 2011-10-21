@@ -34,15 +34,15 @@ Customize
  * Start coding :).
 
 
-Initialize buildout and start Zope
-==================================
+Initialize buildout and start paster
+====================================
 
 .. code-block:: bash
 
     $ virtualenv -p python2.6 --no-site-packages ./
     $ bin/python bootstrap.py
     $ bin/buildout
-    $ bin/instance fg
+    $ bin/paster serve etc/development.ini
 
 
 
