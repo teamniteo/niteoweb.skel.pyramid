@@ -4,7 +4,7 @@ echo 'Running tests'
 bin/py setup.py test
 
 echo '====== Running ZPTLint ======'
-for pt in `find collective/listusers/ -name "*.pt"` ; do bin/zptlint $pt; done
+for pt in `find src/zulu/ -name "*.pt"` ; do bin/zptlint $pt; done
 
 echo '====== Running PyFlakes ======'
 bin/pyflakes src/zulu
