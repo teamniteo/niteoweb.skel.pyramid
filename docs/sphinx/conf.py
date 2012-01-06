@@ -36,7 +36,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'niteoweb.zulu'
+project = u'Zulu'
 copyright = u'%s, NiteoWeb Ltd.' % datetime.now().year
 
 # The version info for the project you're documenting, acts as replacement for
@@ -170,8 +170,8 @@ htmlhelp_basename = 'niteowebzuludoc'
 # (source start file, target name, title, author, documentclass [howto/manual])
 latex_documents = [
   ('index',
-   'niteowebzulu.tex',
-  u'niteoweb.zulu Documentation',
+   'zulu.tex',
+  u'Zulu Documentation',
   u'', 'manual'
   ),
 ]
