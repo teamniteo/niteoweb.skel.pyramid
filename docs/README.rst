@@ -14,7 +14,7 @@ Zulu project
 Quick Start
 ===========
 
-.. sourcecode:: bash
+Start hacking away on this project by running::
 
   $ cd ~/work
   $ svn co https://niteoweb.repositoryhosting.com/svn/niteoweb_zulu/zulu/trunk zulu

@@ -7,7 +7,7 @@ Create a skeleton for your new project
 
 ::
 
-    $ svn export http://svn.github.com/nzupan/niteoweb.skel.pyramid.git <shortname>
+    $ svn export http://svn.github.com/niteoweb/niteoweb.skel.pyramid.git <shortname>
     $ cd <shortname>
     $ mv src/zulu src/<shortname>
     $ mkdir docs/sphinx/_static
