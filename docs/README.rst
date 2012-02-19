@@ -9,7 +9,7 @@ Zulu project
 :Docs: https://sphinx.niteoweb.com/zulu
 :Source: https://niteoweb.repositoryhosting.com/svn/niteoweb_zulu
 :Framework: Pyramid
-:Server: Omega
+:Server: <PRODUCTION SERVER NAME>
 
 Quick Start
 ===========
