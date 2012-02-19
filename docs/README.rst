@@ -22,3 +22,6 @@ Start hacking away on this project by running::
   $ virtualenv -p python2.6 --no-site-packages ./
   $ bin/python bootstrap.py -c development.cfg
   $ bin/buildout -c development.cfg
+  $ bin/paster serve etc/development.ini
+
+
