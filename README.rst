@@ -20,7 +20,6 @@ Commit skeleton to repository
     $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname> -m "create package dir"
     $ svn mkdir https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname>/{trunk,tags,branches} -m "create svn structure"
     $ svn co https://niteoweb.repositoryhosting.com/svn/niteoweb_<shortname>/<shortname>/trunk ./
-    $ ln -s development.cfg buildout.cfg
     $ svn add *
 
 
