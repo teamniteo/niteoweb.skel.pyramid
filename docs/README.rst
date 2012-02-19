@@ -20,5 +20,5 @@ Start hacking away on this project by running::
   $ svn co https://niteoweb.repositoryhosting.com/svn/niteoweb_zulu/zulu/trunk zulu
   $ cd zulu/
   $ virtualenv -p python2.6 --no-site-packages ./
-  $ bin/python bootstrap.py
-  $ bin/buildout
+  $ bin/python bootstrap.py -c development.cfg
+  $ bin/buildout -c development.cfg
