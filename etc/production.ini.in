@@ -14,7 +14,7 @@ sqlalchemy.url = ${buildout:sqlalchemy_url}
 use = egg:WebError#error_catcher
 debug = false
 error_email = maintenance@niteoweb.com
-from_address = ${paster}@zuludb.net
+from_address = ${paster}@zulu.com
 smtp_server = localhost
 
 [filter:tm]
